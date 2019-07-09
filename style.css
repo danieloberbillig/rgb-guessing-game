@@ -19,7 +19,7 @@ header {
 header h1 {
     font-size: 1em;
     font-weight: 200;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }
 
 header h1 span {
@@ -31,7 +31,7 @@ header h1 span {
 .controls {
     text-transform: uppercase;
     width: 60%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     color: rgb(55, 139, 218);
     font-size: .8em;
 }
@@ -51,7 +51,7 @@ header h1 span {
 /* ------------------------------ */
 
 main {
-    background-color: black;
+    background-color: #232323;
     height: 100vh;
     padding-top: 10px;
 }
@@ -65,7 +65,7 @@ main div[class^="cube"] {
     height: 100px;
     width: 100px;
     border-radius: 20px;
-    margin: 5px;
+    margin: 1%;
     border: 1px solid white;
 }
 

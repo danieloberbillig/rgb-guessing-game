@@ -1,3 +1,8 @@
+// TODO: improve
+// - create color array 6 or 3 values
+// - then random over array to pick correct
+// - retrieve backgroundcolor of square and compare with correct color 
+
 // VAR
 let randRgb;
 let numCube = 6;
