@@ -8,6 +8,7 @@ let randRgb;
 let numCube = 6;
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
+let stdBg = 'rgb(55, 139, 218)';
 
 
 
@@ -15,6 +16,8 @@ let correctCol = '';  //correct rgb() str
 
 // 1) Create x rgbs el in arr
 function createColors(numCube) {
+    header.style.backgroundColor = stdBg;
+    cubeArr = [];
     for (let i = 0; i < numCube; i++) {
         let val = randVal();
         cubeArr.push(val);
@@ -38,9 +41,13 @@ let titleRgb = document.querySelector('.rgb');
 titleRgb.textContent = '';
 
 let cubeNodes = document.querySelectorAll("[class^='cube']");
+let row1 = document.querySelector('.row1');
+let row2 = document.querySelector('.row2');
 let cubeDOM = [...cubeNodes];  // nodelist to array
 let header = document.querySelector('header');
+let easyElm = document.querySelector('#easy');
 let easy = document.querySelector('#easy').addEventListener('click', leveleasy);
+let hardElm = document.querySelector('#hard');
 let hard = document.querySelector('#hard').addEventListener('click', levelhard);
 
 
@@ -129,17 +136,21 @@ function cubeColor() {
 
 function leveleasy() {
     numCube = 3;
+    row2.style.display = 'none';
     // newColors()
     fillCubes();
-
+    easyElm.classList.add("active");
+    hardElm.classList.remove("active");
 }
 
 
 function levelhard() {
     numCube = 6;
+    row2.style.display = 'flex';
     // newColors()
     fillCubes();
-
+    hardElm.classList.add("active");
+    easyElm.classList.remove("active");
 }
 
 

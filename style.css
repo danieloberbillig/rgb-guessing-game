@@ -42,10 +42,10 @@ header h1 span {
 
 .controls ul li {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 0px;
     font-weight: 700;
     cursor: pointer;
-    padding: 3px;
+    padding: 3px 20px 3px 20px;
 }
 
 /* ------------------------------ */
@@ -74,4 +74,9 @@ main div[class^="cube"] {
 .hide {
     visibility: hidden;
     display: none;
+}
+
+.active {
+    background-color: rgb(55, 139, 218);
+    color: white;
 }
