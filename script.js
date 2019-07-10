@@ -86,10 +86,16 @@ function levelhard() {
 
 function randVal() {
     let res;
-
+// TODO: needs to be 256!!!
     let r = Math.floor(Math.random() * 255) + 0;
     let g = Math.floor(Math.random() * 255) + 0;
     let b = Math.floor(Math.random() * 255) + 0;
 
     return res = `rgb(${r}, ${g}, ${b})`;
 }
+
+// TODO: IMPLEMENT
+// Returns a random integer between min (include) and max (include)
+// Math.floor(Math.random() * (max - min + 1)) + min;
+// OPTIMAL WAY!?
+// Math.floor(Math.random() * cubeArr.length);

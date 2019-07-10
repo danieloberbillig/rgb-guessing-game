@@ -70,7 +70,8 @@ main div[class^="row"] {
 main div[class^="cube"] {
     height: 100px;
     width: 100px;
-    border-radius: 20px;
+    border-radius: 20px; 
+    /* TODO: use % */
     margin: 1%;
     border: 1px solid var(--secondary-color);
 }
