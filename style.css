@@ -18,6 +18,7 @@ body {
 /* RE-DESIGN SCREEN ------------- */
 .game-container {
     display: flex;
+    height: 100vh;
 }
 
 .control-area {
@@ -35,8 +36,36 @@ body {
     background-color: #000;
 
     display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    height: 100%;
+    width: 100%;
 }
 
+.tile {
+    height: 50px;
+    /* width: 33%;  */
+    flex: 1;
+    min-width: 33%;
+    min-height: 33%;
+    /* align-self: stretch; */
+    transition: background-color 0.5s; 
+    border: .5px solid black;
+}
+
+.oneRow {
+    height: 50%;
+    align-self: center;
+}
+
+.twoRow {
+    height: 50%;
+}
+
+.threeRow {
+    height: 33%;
+}
 
 .control-area-content {
     width: 80%;
@@ -138,16 +167,16 @@ header p.rgb {
 }
 /* ------------------------------ */
 
-main {
+/* main {
     background-color: #232323;
     height: 100vh;
     padding-top: 10px;
-}
+} */
 
-main div[class^="row"] {
+/* main div[class^="row"] {
     display: flex;
     justify-content: center;
-}
+} */
 
 /* main div[class^="cube"] {
     height: 100px;
@@ -158,12 +187,6 @@ main div[class^="row"] {
     transition: background-color 0.5s; 
 } */
 
-.tile {
-    height: 33%;
-    width: 33%;
-    transition: background-color 0.5s; 
-    border: 1px solid var(--secondary-color);
-}
 
 /* TODO: NOT WORKING */
 button.active {

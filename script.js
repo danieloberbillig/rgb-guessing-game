@@ -2,6 +2,7 @@
 // VAR
 let randRgb;
 let numTiles = 6;
+let level = 'medium';
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
 // let stdBg = '';
@@ -47,16 +48,16 @@ function init() {
 }
 
 function reset() {
-    
+
     // clear result message
     msg.textContent = '';
-     
+
     // clear tiles
-     let tileToRemove = tileArea.lastElementChild;
-     while (tileToRemove) {
-         tileArea.removeChild(tileToRemove);
-         tileToRemove = tileArea.lastElementChild;
-     }
+    let tileToRemove = tileArea.lastElementChild;
+    while (tileToRemove) {
+        tileArea.removeChild(tileToRemove);
+        tileToRemove = tileArea.lastElementChild;
+    }
 }
 
 function createColors(numCube) {
@@ -75,13 +76,26 @@ function createColors(numCube) {
 
 function createTile(colorRange) {
 
-   
-
-
     // 1) for each value in color array, create a tile, style with rgb and append to DOM, add listener 
     colorRange.forEach(el => {
         let tile = document.createElement("div");
         tile.classList.add("tile");
+console.log(`numTiles: ${numTiles}`);
+
+        switch (level) {
+            case 'easy':
+                tile.classList.add("oneRow");
+                break;
+            case 'medium':
+                tile.classList.add("twoRow");
+                break;
+            case 'hard':
+                tile.classList.add("threeRow");
+                break;
+            default:
+                break;
+        }
+
         tile.addEventListener('click', checkAnswer);
         tile.style.backgroundColor = el;
         tileArea.appendChild(tile);
@@ -91,7 +105,7 @@ function createTile(colorRange) {
 
 function checkAnswer() {
     if (this.style.backgroundColor === correctCol) {
-            msg.textContent = 'correct';
+        msg.textContent = 'correct';
     } else if (this.style.backgroundColor !== correctCol) {
         msg.textContent = 'Wrong. Try again.'
         newBtn.textContent = 'restart';
@@ -101,6 +115,7 @@ function checkAnswer() {
 
 function leveleasy() {
     numTiles = 3;
+    level = 'easy';
     easyElm.classList.add("active");
     medElm.classList.remove("active");
     hardElm.classList.remove("active");
@@ -109,6 +124,7 @@ function leveleasy() {
 
 function levelmedium() {
     numTiles = 6;
+    level = 'medium';
     hardElm.classList.remove("active");
     easyElm.classList.remove("active");
     medElm.classList.add("active");
@@ -117,6 +133,7 @@ function levelmedium() {
 
 function levelhard() {
     numTiles = 9;
+    level = 'hard';
     hardElm.classList.add("active");
     easyElm.classList.remove("active");
     medElm.classList.remove("active");
@@ -137,7 +154,7 @@ function randVal() {
 
 
 function testLog() {
-    console.log(`numCube: ${numTiles}`);
+    console.log(`numTiles: ${numTiles}`);
     console.log(`cubeArr: ${cubeArr}`);
     console.log(`correctCol: ${correctCol}`);
 }
