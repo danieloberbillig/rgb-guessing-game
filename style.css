@@ -64,7 +64,6 @@ header h1 span {
     height: 100%;
     background: white;
     border: none;
-    /* ensure it takes all height from parent el */
     display: inline-block;
     font-weight: 700;
     padding: 3px 20px 3px 20px;
@@ -105,8 +104,7 @@ main div[class^="row"] {
 main div[class^="cube"] {
     height: 100px;
     width: 100px;
-    border-radius: 20px; 
-    /* TODO: use % */
+    border-radius: 20%; 
     margin: 1%;
     border: 1px solid var(--secondary-color);
     transition: background-color 0.5s; 

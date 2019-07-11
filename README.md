@@ -19,24 +19,26 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 - add button tag
 - hover button effect
 - fade: transition all 0.5s for button / background 0.6 for square
-
+- display 'correct / wrong' instead of alert
+- transition of appearing cubes
 
 ## Outlook
+- add sound effects
+- add animations of breaking/exploding tiles
+- add score
+- add 3, 6, 9 color tiles 
 - show hint rgb for developer, else only show rgb if incorrect
 - loop through all squares and only show / set color if color[i] exist
 - add loop through buttons (for more levels) class to add eventlisteners
 - consider splitting up code in more functions (all >10 lines)
 - extract more into single functions (eg math.random)
 - use ternary operator if ? then : else (for 2 options useful) -> NOT SUITABLE
-- display 'correct / wrong' instead of alert
 - avoid global variables and move into functions and return values from function
 - show rgb of wrong selection to learn
 - re-style differently
 - consider creating objects with properties and methods
-- transition of appearing cubes
 - deploy
 - google analytics
 - add advertising
 - PWA
 - consider line-height in styling
-
