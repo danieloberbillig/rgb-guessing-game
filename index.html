@@ -5,41 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Color Game</title>
+    <title>Color Game Re-design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>The great
-            <br>
-            <span class="rgb">RGB(175, 203, 2)</span>
-            <br>
-            guessing game</h1>
-    </header>
+    <div class="game-container">
+        <!-- OVERALL FLEXBOX CONTAINER -->
 
-    <div class="controls">
-        <ul>
-            <li><button id="new">new</button></li>
-            <li id="message"></li>
-            <li><button id="easy">easy</button></li>
-            <li><button id="hard" class="active">hard</button></li>
-        </ul>
+
+        <div class="control-area">
+            <!-- LEFT SIDE SCREEN -->
+
+            <header>
+                <h1>The re-designed
+                    <br>
+                    <span class="rgb">RGB(175, 203, 2)</span>
+                    <br>
+                    color guessing game</h1>
+            </header>
+
+            <div class="controls">
+                <ul>
+                    <li><button id="new">new</button></li>
+                    <li id="message"></li>
+                    <li><button id="easy">easy</button></li>
+                    <li><button id="medium">medium</button></li>
+                    <li><button id="hard" class="active">hard</button></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="tile-area">
+            <!-- RIGHT SIDE SCREEN  -->
+
+            <main>
+                <div class="row1">
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                </div>
+                <div class="row2">
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                </div>
+                <div class="row3">
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                </div>
+
+            </main>
+        </div>
     </div>
 
-    <main>
-        <div class="row1">
-            <div class="cube1"></div>
-            <div class="cube2"></div>
-            <div class="cube3"></div>
-        </div>
-        <div class="row2">
-            <div class="cube4"></div>
-            <div class="cube5"></div>
-            <div class="cube6"></div>
-        </div>
 
-    </main>
     <script src="script.js"></script>
 </body>
 
