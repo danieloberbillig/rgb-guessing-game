@@ -5,9 +5,12 @@ let numCube = 6;
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
 let stdBg = 'rgb(55, 139, 218)';
+// ---
 
-// EVENTS
-document.querySelector('#new').addEventListener('click', fillCubes);
+// DOM ELM AND EVENT LISTENER
+let newBtn = document.querySelector('#new');
+newBtn.addEventListener('click', fillCubes);
+
 let titleRgb = document.querySelector('.rgb');
 titleRgb.textContent = '';
 
@@ -20,10 +23,15 @@ let easyElm = document.querySelector('#easy');
 let easy = document.querySelector('#easy').addEventListener('click', leveleasy);
 let hardElm = document.querySelector('#hard');
 let hard = document.querySelector('#hard').addEventListener('click', levelhard);
+// ---
 
+// START GAME
+init();
 
-// INIT GAME
-fillCubes();
+function init() {
+    fillCubes();
+
+}
 
 
 function fillCubes() {
@@ -49,7 +57,7 @@ function createColors(numCube) {
         cubeArr.push(val);
     }
 
-    let correctColVal = Math.floor(Math.random() * numCube) + 0;
+    let correctColVal = Math.floor(Math.random() * numCube) + 1;
     correctCol = cubeArr[correctColVal];
     titleRgb.textContent = correctCol;
 
@@ -65,6 +73,8 @@ function checkAnswer() {
         }
     } else if (this.style.backgroundColor !== correctCol) {
         alert('Wrong! Try again.');
+        newBtn.textContent = 'try again';
+        this.style.backgroundColor = "#232323";
     }
 }
 
@@ -87,15 +97,14 @@ function levelhard() {
 function randVal() {
     let res;
 // TODO: needs to be 256!!!
-    let r = Math.floor(Math.random() * 255) + 0;
-    let g = Math.floor(Math.random() * 255) + 0;
-    let b = Math.floor(Math.random() * 255) + 0;
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
 
     return res = `rgb(${r}, ${g}, ${b})`;
 }
 
-// TODO: IMPLEMENT
-// Returns a random integer between min (include) and max (include)
-// Math.floor(Math.random() * (max - min + 1)) + min;
-// OPTIMAL WAY!?
-// Math.floor(Math.random() * cubeArr.length);
+/* Notes
+ Math.floor(Math.random() * (max - min + 1)) + min;
+ Math.floor(Math.random() * cubeArr.length);
+*/

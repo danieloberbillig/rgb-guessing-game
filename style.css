@@ -54,6 +54,18 @@ header h1 span {
     cursor: pointer;
     padding: 3px 20px 3px 20px;
 }
+
+button {
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    height: 100%;
+    /* ensure it takes all height from parent el */
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 /* ------------------------------ */
 
 main {
@@ -74,6 +86,7 @@ main div[class^="cube"] {
     /* TODO: use % */
     margin: 1%;
     border: 1px solid var(--secondary-color);
+    transition: background-color 0.5s; 
 }
 
 
