@@ -7,6 +7,12 @@ Purpose: Refresh learnings of DOM manipulation basics
 
 Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/lecture/3861466#overview
 
+
+# TODO
+- align copyright flex item to bottom page
+- center controls
+
+
 # DONE
 - outline: none to avoid surrounding blue line of objects
 - add height: 100% to button to ensure it takes 100% of parent element (not just the line height)
