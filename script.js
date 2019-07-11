@@ -4,7 +4,8 @@ let randRgb;
 let numCube = 6;
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
-let stdBg = 'rgb(55, 139, 218)';
+let stdBg = '';
+// let stdBg = 'rgb(55, 139, 218)';
 // ---
 
 // DOM ELM AND EVENT LISTENER
