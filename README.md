@@ -1,11 +1,17 @@
-"# color-game" 
+# Color Game
+
+Started: 09/07/2019
+Author: Daniel Oberbillig (danieloberbillig.com)
+
+Purpose: Refresh learnings of DOM manipulation basics
 
 Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/lecture/3861466#overview
 
-
-
-
 # DONE
+- outline: none to avoid surrounding blue line of objects
+- add height: 100% to button to ensure it takes 100% of parent element (not just the line height)
+- fade out wrong color
+- span between buttons to show message: display inline-block and width 20% creates gap
 - create init() function that runs all from start
 - write 'try again' instead of 'start game' after first try
 - implement correct math.random (code bottom of js)
@@ -14,19 +20,12 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 - hover button effect
 - fade: transition all 0.5s for button / background 0.6 for square
 
-# REVIEW
-- span between buttons to show message: display inline-block and width 20% creates gap
-- loop through all squares and only show / set color if color[i] exist
-- add loop through buttons (for more levels) class to add eventlisteners
-- create reset() function to update #cubes,...
-- consider splitting up code in more functions (all >10 lines)
-- init should just call functions (should not contain much code)
-- fade out wrong color -> NOT WORKING
-- add height: 100% to button to ensure it takes 100% of parent element (not just the line height)
-- font-size: inherit for controls
-- outline: none to avoid surrounding blue line of objects  --> WHERE, for buttons not working
 
 ## Outlook
+- show hint rgb for developer, else only show rgb if incorrect
+- loop through all squares and only show / set color if color[i] exist
+- add loop through buttons (for more levels) class to add eventlisteners
+- consider splitting up code in more functions (all >10 lines)
 - extract more into single functions (eg math.random)
 - use ternary operator if ? then : else (for 2 options useful) -> NOT SUITABLE
 - display 'correct / wrong' instead of alert

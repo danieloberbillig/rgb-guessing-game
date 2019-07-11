@@ -35,34 +35,57 @@ header h1 span {
 /* ------------------------------ */
 
 /* CONTROLS --------------------- */
-.controls {
+.controls ul li button {
     text-transform: uppercase;
-    width: 60%;
     margin: 0 auto;
     color: var(--primary-color);
     font-size: .8em;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    height: 100%;
+    background: white;
+    border: none;
+    /* ensure it takes all height from parent el */
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 3px 20px 3px 20px;
+    outline: none;
+}
+
+#message {
+    width: 25%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: rgb(31, 31, 77);
+    font-size: .8em;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    height: 100%;
+    background: white;
+    border: none;
+    /* ensure it takes all height from parent el */
+    display: inline-block;
+    font-weight: 700;
+    padding: 3px 20px 3px 20px;
+}
+
+
+.controls {
+    max-width: 700px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.controls ul li {
+    display: inline-block;
 }
 
 .controls ul {
     list-style: none;
 }
 
-.controls ul li {
-    display: inline-block;
-    margin-left: 0px;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 3px 20px 3px 20px;
-}
-
-button {
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    height: 100%;
-    /* ensure it takes all height from parent el */
-}
-
-button:hover {
+.controls ul li button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
@@ -87,12 +110,6 @@ main div[class^="cube"] {
     margin: 1%;
     border: 1px solid var(--secondary-color);
     transition: background-color 0.5s; 
-}
-
-
-.hide {
-    visibility: hidden;
-    display: none;
 }
 
 .active {

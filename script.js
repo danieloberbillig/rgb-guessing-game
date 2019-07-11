@@ -11,6 +11,8 @@ let stdBg = 'rgb(55, 139, 218)';
 let newBtn = document.querySelector('#new');
 newBtn.addEventListener('click', fillCubes);
 
+let msg = document.querySelector('#message');
+
 let titleRgb = document.querySelector('.rgb');
 titleRgb.textContent = '';
 
@@ -35,6 +37,9 @@ function init() {
 
 
 function fillCubes() {
+    // 0) Update UI
+    msg.textContent = ''
+    
     // 1) create array with colors and select correct one
     createColors(numCube);
 
@@ -42,8 +47,8 @@ function fillCubes() {
     for (let i = 0; i < cubeArr.length; i++) {
         const el = cubeArr[i];
         cubeDOM[i].style.backgroundColor = el;
-        cubeDOM[i].textContent = el;
-        
+        // cubeDOM[i].textContent = el;
+
         // 3) add click evt listener 
         cubeDOM[i].addEventListener('click', checkAnswer);
     }
@@ -70,10 +75,11 @@ function checkAnswer() {
         for (let i = 0; i < cubeDOM.length; i++) {
             cubeDOM[i].style.backgroundColor = correctCol;
             header.style.backgroundColor = correctCol;
+            msg.textContent = 'correct'
         }
     } else if (this.style.backgroundColor !== correctCol) {
-        alert('Wrong! Try again.');
-        newBtn.textContent = 'try again';
+        msg.textContent = 'Wrong. Try again.'
+        newBtn.textContent = 'restart';
         this.style.backgroundColor = "#232323";
     }
 }
@@ -96,7 +102,7 @@ function levelhard() {
 
 function randVal() {
     let res;
-// TODO: needs to be 256!!!
+    // TODO: needs to be 256!!!
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
