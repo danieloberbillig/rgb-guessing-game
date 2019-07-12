@@ -9,17 +9,19 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 
 
 # TODO
-- add sound effects
-- add animation if wrong
-- resize / position correct/wrong message
 - bug fix: after a while the correct color returns undefined
-- different font types more bold and narrow, more hipster schreibschrift
 - add daniel footer
 - add proper readme
-- vertical center control dark background buttons
+- change left side to flex items as currently things overlap when resize to mobile
+- click on restart should end sound effect
 
 
 # DONE
+- vertical center control dark background buttons
+- different font types more bold and narrow, more hipster schreibschrift
+- resize / position correct/wrong message
+- add animation if wrong
+- add sound effects
 - center controls
 - align copyright flex item to bottom page
 - outline: none to avoid surrounding blue line of objects
