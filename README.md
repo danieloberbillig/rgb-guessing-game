@@ -16,6 +16,7 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 - different font types more bold and narrow, more hipster schreibschrift
 - add daniel footer
 - add proper readme
+- vertical center control dark background buttons
 
 
 # DONE

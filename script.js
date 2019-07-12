@@ -81,7 +81,8 @@ function createTile(colorRange) {
     colorRange.forEach(el => {
         let tile = document.createElement("div");
         tile.classList.add("tile");
-console.log(`numTiles: ${numTiles}`);
+        tile.innerHTML = `<p><i class="skull fas fa-skull-crossbones"></i></p>`;
+        // console.log(`numTiles: ${numTiles}`);
 
         switch (level) {
             case 'easy':
@@ -99,6 +100,7 @@ console.log(`numTiles: ${numTiles}`);
 
         tile.addEventListener('click', checkAnswer);
         tile.style.backgroundColor = el;
+        tile.style.color = el;
         tileArea.appendChild(tile);
     });
 }
@@ -106,12 +108,53 @@ console.log(`numTiles: ${numTiles}`);
 
 function checkAnswer() {
     if (this.style.backgroundColor === correctCol) {
+        msg.style.visibility = 'visible';
         msg.textContent = 'correct';
+        newBtn.textContent = 'restart';
+        playSoundCorrect(1);
     } else if (this.style.backgroundColor !== correctCol) {
-        msg.textContent = 'Wrong. Try again.'
+
+        playSoundWrong(1);
+
+        wrongMsg();
         newBtn.textContent = 'restart';
         this.style.backgroundColor = bgStandard;
+        this.style.color = 'rgb(0,0,0)';
     }
+}
+
+let bomb = document.querySelector('.bomb');
+
+
+// AUDIO
+var soundWrong = new Audio("asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg");
+var soundCorrect = new Audio("asset/sound/human_crowd_applause_snooker_match_002.mp3");
+soundWrong.preload = 'auto';
+soundCorrect.preload = 'auto';
+soundWrong.load();
+soundCorrect.load();
+
+function playSoundWrong(volume) {
+    var click = soundWrong.cloneNode();
+    click.volume = volume;
+    click.play();
+}
+
+function playSoundCorrect(volume) {
+    var click = soundCorrect.cloneNode();
+    click.volume = volume;
+    click.play();
+}
+
+
+
+function wrongMsg() {
+    msg.style.visibility = 'visible';
+    msg.textContent = 'Wrong';
+    setTimeout(() => {
+        msg.style.visibility = 'hidden';
+    }, 1500);
+
 }
 
 function leveleasy() {

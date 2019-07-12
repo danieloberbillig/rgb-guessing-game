@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Color Game Re-design</title>
+    <title>RGB Color Game</title>
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Roboto:300,400,700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto:300,400,700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- AUDIO -->
+    <audio class="bomb">
+        <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg" type="audio/ogg" />
+        <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.mp3" type="audio/mp3" />
+        Your browser does not support the 'audio' element.
+    </audio>
+
     <div class="game-container">
         <!-- OVERALL FLEXBOX CONTAINER -->
 
@@ -23,7 +33,8 @@
             <div class="control-area-content">
                 <!-- CENTER CONTENT -->
                 <header>
-                    <h1>The RGB guessing game</h1>
+                    <h1>RGB color game</h1>
+                    <p class="question">search for</p>
                     <p class="rgb">RGB(175, 203, 2)</p>
                 </header>
 
@@ -41,7 +52,7 @@
             <p id="message">You won</p>
 
             <footer>
-                <p>Copyright 2019. All rights reserved.</p>
+                <p>Coded with Love in Melbourne 2019</p>
             </footer>
         </div>
 
