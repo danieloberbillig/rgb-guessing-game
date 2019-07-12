@@ -5,6 +5,7 @@ let numTiles = 6;
 let level = 'medium';
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
+let bgStandard = 'rgb(78, 78, 78)'; //primary color
 // let stdBg = '';
 // let stdBg = 'rgb(55, 139, 218)';
 // ---
@@ -109,7 +110,7 @@ function checkAnswer() {
     } else if (this.style.backgroundColor !== correctCol) {
         msg.textContent = 'Wrong. Try again.'
         newBtn.textContent = 'restart';
-        this.style.backgroundColor = "#232323";
+        this.style.backgroundColor = bgStandard;
     }
 }
 
