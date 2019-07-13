@@ -4,12 +4,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 }
 
 /* COLOR VARIABLES */
 
 :root {
-    --primary-color: rgb(78, 78, 78);
+    --primary-color: red;
+    /* --primary-color: rgb(78, 78, 78); */
     --secondary-color: rgb(255, 250, 250);
 }
 
@@ -46,9 +48,7 @@ body {
     min-width: 33.3%;
     min-height: 33.334%;
     transition: background-color 0.5s, color .5s;
-    /* border: .5px solid var(--primary-color); */
     cursor: crosshair;
-    /* margin: 1px; */
     color: white;
     display: flex;
     align-items: center;
@@ -57,8 +57,6 @@ body {
 
 .skull {
     font-size: 3em;
-    /* color: inherit; */
-    /* visibility: hidden; */
 }
 
 .oneRow {
@@ -76,8 +74,6 @@ body {
 
 .control-area-content {
     width: 80%;
-    /* padding-top: 40%; */
-    /* height: 500px; */
 }
 
 footer {
@@ -137,7 +133,6 @@ header p.rgb {
     font-size: .8em;
     letter-spacing: 1px;
     transition: all 0.3s;
-    /* height: 100%; */
     background: white;
     border: none;
     /* ensure it takes all height from parent el */
@@ -151,7 +146,6 @@ header p.rgb {
 }
 
 #message {
-    /* width: 25%; */
     text-transform: uppercase;
     margin: 50px auto;
     color: rgb(31, 31, 77);
@@ -163,16 +157,12 @@ header p.rgb {
     border: none;
     display: inline-block;
     font-weight: 700;
-    /* padding: 3px 20px 3px 20px; */
     font-family: 'Gloria Hallelujah', cursive;
 }
 
 .controls {
-    /* max-width: 700px; */
     margin: 0 auto 0 auto;
     text-align: center;
-    /* height: 10px; */
-    /* line-height: 2em; */
     margin-top: 30px;
 }
 
@@ -208,19 +198,13 @@ header p.rgb {
 
 /* Smartphones (landscape) ----------- */
 
-@media only screen and (min-width: 321px) {
-    /* Styles */
-}
-
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 600px) {
     .game-container {
         display: flex;
         flex-direction: column;
-        /* height: 100vh; */
         font-size: .8em;
-        /* padding-top: 10px; */
     }
 
     .control-area {
@@ -229,52 +213,29 @@ header p.rgb {
 
     header h1 {
         margin: 0;
-        /* padding: 0; */
     }
 
     header p.question {
         margin: 0;
-        /* padding: 0; */
     }
 
-    header .rgb {
-        /* margin: 0; */
-        /* padding: 0; */
-    }
+    
     footer {
-        /* margin-bottom: 5px; */
         font-size: .5em;
         position: absolute;
         bottom: 5px;
         margin: 0;
-        /* visibility: hidden; */
     }
-    /* .control-area {
-        flex: 1;
-        /* height: 100px; */
-    /* padding-top: 10px; */
-    /* } */
-    */ .tile-area {
+   
+    .tile-area {
         flex: 3;
     }
-    .control-area-content {
-        /* padding-top: 70px; */
-        /* padding: 0; */
-        /* margin-top: 0px; */
-        /* height: 50px; */
-        /* margin-bottom: 40px; */
-        /* height: 100px; */
-    }
+   
     #message {
-        /* margin-top: 10px; */
         margin: 10px auto 10px auto;
     }
     .controls {
-        /* padding-top: 50px; */
         margin-top: 10px;
-
     }
-    header {
-        /* height: 20px; */
-    }
+   
 }
