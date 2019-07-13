@@ -10,8 +10,7 @@ body {
 /* COLOR VARIABLES */
 
 :root {
-    --primary-color: red;
-    /* --primary-color: rgb(78, 78, 78); */
+    --primary-color: rgb(78, 78, 78);
     --secondary-color: rgb(255, 250, 250);
 }
 
