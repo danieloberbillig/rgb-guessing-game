@@ -45,7 +45,7 @@ function init() {
     let colorRange = createColors(numTiles);
     createTile(colorRange)
 
-    testLog();
+    // testLog();
 }
 
 function reset() {
@@ -68,7 +68,7 @@ function createColors(numCube) {
         cubeArr.push(val);
     }
 
-    let correctColVal = Math.floor(Math.random() * numCube) + 1;
+    let correctColVal = Math.floor(Math.random() * numCube);
     correctCol = cubeArr[correctColVal];
     titleRgb.textContent = correctCol;
 
@@ -128,7 +128,7 @@ let bomb = document.querySelector('.bomb');
 
 // AUDIO
 var soundWrong = new Audio("asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg");
-var soundCorrect = new Audio("asset/sound/human_crowd_applause_snooker_match_002.mp3");
+var soundCorrect = new Audio("asset/sound/zapsplat_human_male_middle_aged_soft_tone_says_oh_yeah_22279.ogg");
 soundWrong.preload = 'auto';
 soundCorrect.preload = 'auto';
 soundWrong.load();
@@ -201,6 +201,21 @@ function testLog() {
     console.log(`numTiles: ${numTiles}`);
     console.log(`cubeArr: ${cubeArr}`);
     console.log(`correctCol: ${correctCol}`);
+}
+
+
+// LOADING SPINNER / HIDE CONTENT WHEN LOADING ASSETS
+document.onreadystatechange = function () {
+    var state = document.readyState
+    if (state == 'interactive') {
+        document.getElementById('hideContentWhileLoading').style.visibility = "hidden";
+    } else if (state == 'complete') {
+        setTimeout(function () {
+            document.getElementById('interactive');
+            document.getElementById('load').style.visibility = "hidden";
+            document.getElementById('hideContentWhileLoading').style.visibility = "visible";
+        }, 1000);
+    }
 }
 
 

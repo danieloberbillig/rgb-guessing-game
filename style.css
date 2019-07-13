@@ -1,240 +1,263 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
 }
 
 /* COLOR VARIABLES */
-
 :root {
-    --primary-color: rgb(78, 78, 78);
-    --secondary-color: rgb(255, 250, 250);
+  --primary-color: rgb(78, 78, 78);
+  --secondary-color: rgb(255, 250, 250);
 }
 
-/* RE-DESIGN SCREEN ------------- */
+/* LOADING SPINNER */
+#load {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid var(--primary-color);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  z-index: 9999;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------- */
+/* RE-DESIGN SCREEN ------------- */
 .game-container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .control-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
 }
 
 .tile-area {
-    flex: 2;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    align-content: stretch;
-    height: 100%;
-    width: 100%;
+  flex: 2;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  width: 100%;
 }
 
 .tile {
-    height: 50px;
-    flex: 1;
-    min-width: 33.3%;
-    min-height: 33.334%;
-    transition: background-color 0.5s, color .5s;
-    cursor: crosshair;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 50px;
+  flex: 1;
+  min-width: 33.3%;
+  min-height: 33.334%;
+  transition: background-color 0.5s, color 0.5s;
+  cursor: crosshair;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skull {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .oneRow {
-    height: 50%;
-    align-self: center;
+  height: 50%;
+  align-self: center;
 }
 
 .twoRow {
-    height: 50%;
+  height: 50%;
 }
 
 .threeRow {
-    height: 33%;
+  height: 33%;
 }
 
 .control-area-content {
-    width: 80%;
+  width: 80%;
 }
 
 footer {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 0.6em;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 5px;
-    margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 0.6em;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 5px;
+  margin: 0;
 }
 
-
-
 /* ------------------------------ */
-
 /* HEADER ----------------------- */
-
 header {
-    color: var(--primary-color);
-    text-align: center;
-    text-transform: uppercase;
-    /* height: 100px; */
-    /* padding: 15px; */
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  /* height: 100px; */
+  /* padding: 15px; */
 }
 
 header h1 {
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 1.3em;
-    font-weight: 200;
-    margin: 5px auto 20px auto;
-    opacity: 0.7;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 1.3em;
+  font-weight: 200;
+  margin: 5px auto 20px auto;
+  opacity: 0.7;
 }
 
 header p.question {
-    text-transform: uppercase;
-    font-size: .8em;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    opacity: 0.7;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  opacity: 0.7;
 }
 
 header p.rgb {
-    font-size: 2em;
-    font-weight: 700;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 /* ------------------------------ */
-
 /* CONTROLS --------------------- */
-
 .controls ul li button {
-    text-transform: uppercase;
-    margin: 0 auto;
-    color: var(--primary-color);
-    font-size: .8em;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    background: white;
-    border: none;
-    /* ensure it takes all height from parent el */
-    display: inline-block;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 3px 5px 3px 5px;
-    margin-left: 5px;
-    outline: none;
-    line-height: 1.5em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: var(--primary-color);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  background: white;
+  border: none;
+  /* ensure it takes all height from parent el */
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 3px 5px 3px 5px;
+  margin-left: 5px;
+  outline: none;
+  line-height: 1.5em;
 }
 
 #message {
-    text-transform: uppercase;
-    margin: 50px auto;
-    color: rgb(31, 31, 77);
-    font-size: 2.5em;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    height: 20px;
-    /* reserve space to avoid moving adjacent elms */
-    border: none;
-    display: inline-block;
-    font-weight: 700;
-    font-family: 'Gloria Hallelujah', cursive;
+  text-transform: uppercase;
+  margin: 50px auto;
+  color: #1f1f4d;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  height: 20px;
+  /* reserve space to avoid moving adjacent elms */
+  border: none;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 .controls {
-    margin: 0 auto 0 auto;
-    text-align: center;
-    margin-top: 30px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .controls ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 #new {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .controls ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .controls ul li button:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    line-height: 1.5em;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  line-height: 1.5em;
 }
 
 /* TODO: NOT WORKING */
-
 .controls ul li button.active {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* ------------------------------ */
-
 /* MEDIA QUERIES */
-
 /* Smartphones (landscape) ----------- */
-
 /* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 600px), (min-width: 768px) and (max-width: 1024px) {
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+  }
 
-@media only screen and (max-width: 600px) {
-    .game-container {
-        display: flex;
-        flex-direction: column;
-        font-size: .8em;
-    }
+  .control-area {
+    position: relative;
+  }
 
-    .control-area {
-        position: relative;
-    }
+  header h1 {
+    margin: 0;
+  }
 
-    header h1 {
-        margin: 0;
-    }
+  header p.question {
+    margin: 0;
+  }
 
-    header p.question {
-        margin: 0;
-    }
+  footer {
+    font-size: 0.5em;
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+  }
 
-    
-    footer {
-        font-size: .5em;
-        position: absolute;
-        bottom: 5px;
-        margin: 0;
-    }
-   
-    .tile-area {
-        flex: 3;
-    }
-   
-    #message {
-        margin: 10px auto 10px auto;
-    }
-    .controls {
-        margin-top: 10px;
-    }
-   
+  .tile-area {
+    flex: 3;
+  }
+
+  #message {
+    margin: 10px auto 10px auto;
+  }
+
+  .controls {
+    margin-top: 10px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

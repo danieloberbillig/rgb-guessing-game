@@ -16,52 +16,56 @@
 </head>
 
 <body>
-    <!-- AUDIO -->
-    <audio class="bomb">
-        <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg" type="audio/ogg" />
-        <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.mp3" type="audio/mp3" />
-        Your browser does not support the 'audio' element.
-    </audio>
-
-    <div class="game-container">
-        <!-- OVERALL FLEXBOX CONTAINER -->
+    <div id="load"></div>
+    <div id="hideContentWhileLoading">
 
 
-        <div class="control-area">
-            <!-- LEFT SIDE SCREEN -->
+        <!-- AUDIO -->
+        <audio class="bomb">
+            <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg" type="audio/ogg" />
+            <source src="asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.mp3" type="audio/mp3" />
+            Your browser does not support the 'audio' element.
+        </audio>
 
-            <div class="control-area-content">
-                <!-- CENTER CONTENT -->
-                <header>
-                    <h1>RGB color game</h1>
-                    <p class="question">search for</p>
-                    <p class="rgb">RGB(175, 203, 2)</p>
-                </header>
+        <div class="game-container">
+            <!-- OVERALL FLEXBOX CONTAINER -->
 
-                <div class="controls">
-                    <ul>
-                        <li><button id="new">new</button></li>
-                        <li><button id="easy">easy</button></li>
-                        <li><button id="medium" class="active">medium</button></li>
-                        <li><button id="hard">hard</button></li>
-                    </ul>
+
+            <div class="control-area">
+                <!-- LEFT SIDE SCREEN -->
+
+                <div class="control-area-content">
+                    <!-- CENTER CONTENT -->
+                    <header>
+                        <h1>RGB color game</h1>
+                        <p class="question">search for</p>
+                        <p class="rgb">RGB(175, 203, 2)</p>
+                    </header>
+
+                    <div class="controls">
+                        <ul>
+                            <li><button id="new">new</button></li>
+                            <li><button id="easy">easy</button></li>
+                            <li><button id="medium" class="active">medium</button></li>
+                            <li><button id="hard">hard</button></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- <p>You won</p> -->
+                <p id="message"></p>
+
+                <footer>
+                    <p>Coded with Love in Melbourne 2019</p>
+                </footer>
             </div>
 
-            <!-- <p>You won</p> -->
-            <p id="message"></p>
-
-            <footer>
-                <p>Coded with Love in Melbourne 2019</p>
-            </footer>
-        </div>
 
 
+            <div class="tile-area">
+                <!-- RIGHT SIDE SCREEN  -->
 
-        <div class="tile-area">
-            <!-- RIGHT SIDE SCREEN  -->
-
-            <!-- <div class="tile"></div>
+                <!-- <div class="tile"></div>
                 <div class="tile"></div>
                 <div class="tile"></div>
                 <div class="tile"></div>
@@ -70,10 +74,10 @@
                 <div class="tile"></div>
                 <div class="tile"></div>
                 <div class="tile"></div> -->
+            </div>
         </div>
+
     </div>
-
-
     <script src="script.js"></script>
 </body>
 

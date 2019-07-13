@@ -9,14 +9,15 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 
 
 # TODO
-- bug fix: after a while the correct color returns undefined
 - add daniel footer
 - add proper readm
 - change left side to flex items as currently things overlap when resize to mobile
 - click on restart should end sound effect
+- sass style.scss style.css
 
 
 # DONE
+- bug fix: after a while the correct color returns undefined
 - vertical center control dark background buttons
 - different font types more bold and narrow, more hipster schreibschrift
 - resize / position correct/wrong message
