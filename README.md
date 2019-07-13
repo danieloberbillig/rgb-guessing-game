@@ -11,7 +11,7 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 # TODO
 - bug fix: after a while the correct color returns undefined
 - add daniel footer
-- add proper readme
+- add proper readm
 - change left side to flex items as currently things overlap when resize to mobile
 - click on restart should end sound effect
 
