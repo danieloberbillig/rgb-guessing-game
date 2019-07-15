@@ -14,9 +14,12 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 - change left side to flex items as currently things overlap when resize to mobile
 - click on restart should end sound effect
 - sass style.scss style.css
+- exact mobile vh
+- turn off/on music
 
 
 # DONE
+- centralize load spinner
 - bug fix: after a while the correct color returns undefined
 - vertical center control dark background buttons
 - different font types more bold and narrow, more hipster schreibschrift

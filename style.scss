@@ -19,16 +19,26 @@ body {
     border: 16px solid #f3f3f3;
     border-top: 16px solid var(--primary-color);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    // width: 100px;
+    // height: 100px;
     position: fixed;
-    top: 40%;
-    left: 45%;
+    // top: 40%;
+    // left: 45%;
     z-index: 9999;
     animation: spin 2s linear infinite;
     -webkit-animation: spin 2s linear infinite;
     /* Safari */
     animation: spin 2s linear infinite;
+
+    // absolute center spinner
+  height: 3em;
+  width: 3em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /* Safari */
@@ -180,19 +190,37 @@ header p.rgb {
     line-height: 1.5em;
 }
 
+
+
 #message {
+    text-align: center;
+    visibility: hidden;
+    width:300px;
+    height:200px;
+    margin:0 auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top:-50px;
+    z-index: 9999;
+
     text-transform: uppercase;
-    margin: 50px auto;
-    color: rgb(31, 31, 77);
-    font-size: 2.5em;
+    color: var(--primary-color);
+    font-size: 4em;
     letter-spacing: 1px;
     transition: all 0.3s;
-    height: 20px;
-    /* reserve space to avoid moving adjacent elms */
     border: none;
-    display: inline-block;
     font-weight: 700;
     font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
 
 .controls {
@@ -259,9 +287,7 @@ header p.rgb {
     .tile-area {
         flex: 3;
     }
-    #message {
-        margin: 10px auto 10px auto;
-    }
+  
     .controls {
         margin-top: 10px;
     }

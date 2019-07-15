@@ -108,10 +108,21 @@ function createTile(colorRange) {
 
 function checkAnswer() {
     if (this.style.backgroundColor === correctCol) {
-        msg.style.visibility = 'visible';
-        msg.textContent = 'correct';
-        newBtn.textContent = 'restart';
+      
         playSoundCorrect(1);
+
+        correctMsg();
+        newBtn.textContent = 'restart';
+        this.style.backgroundColor = bgStandard;
+        this.style.color = 'rgb(0,0,0)';
+      
+        // msg.textContent = 'correct';
+        // setInterval(() => {
+        //     msg.style.visibility = 'visible';
+        // }, 1000);
+        // msg.style.visibility = 'hidden';
+        // newBtn.textContent = 'restart';
+        // playSoundCorrect(1);
     } else if (this.style.backgroundColor !== correctCol) {
 
         playSoundWrong(1);
@@ -153,7 +164,16 @@ function wrongMsg() {
     msg.textContent = 'Wrong';
     setTimeout(() => {
         msg.style.visibility = 'hidden';
-    }, 1500);
+    }, 700);
+
+}
+
+function correctMsg() {
+    msg.style.visibility = 'visible';
+    msg.textContent = 'Correct';
+    setTimeout(() => {
+        msg.style.visibility = 'hidden';
+    }, 700);
 
 }
 
@@ -214,7 +234,7 @@ document.onreadystatechange = function () {
             document.getElementById('interactive');
             document.getElementById('load').style.visibility = "hidden";
             document.getElementById('hideContentWhileLoading').style.visibility = "visible";
-        }, 1000);
+        }, 700);
     }
 }
 
