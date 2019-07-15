@@ -6,8 +6,6 @@ let level = 'medium';
 let cubeArr = [];
 let correctCol = '';  //correct rgb() str
 let bgStandard = 'rgb(78, 78, 78)'; //primary color
-// let stdBg = '';
-// let stdBg = 'rgb(55, 139, 218)';
 // ---
 
 // DOM ELM AND EVENT LISTENER
@@ -113,16 +111,7 @@ function checkAnswer() {
 
         correctMsg();
         newBtn.textContent = 'restart';
-        // this.style.backgroundColor = bgStandard;
-        // this.style.color = 'rgb(0,0,0)';
-      
-        // msg.textContent = 'correct';
-        // setInterval(() => {
-        //     msg.style.visibility = 'visible';
-        // }, 1000);
-        // msg.style.visibility = 'hidden';
-        // newBtn.textContent = 'restart';
-        // playSoundCorrect(1);
+
     } else if (this.style.backgroundColor !== correctCol) {
 
         playSoundWrong(1);
@@ -138,8 +127,8 @@ let bomb = document.querySelector('.bomb');
 
 
 // AUDIO
-var soundWrong = new Audio("asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg");
-var soundCorrect = new Audio("asset/sound/zapsplat_human_male_middle_aged_soft_tone_says_oh_yeah_22279.ogg");
+let soundWrong = new Audio("asset/sound/zapsplat_warfare_bomb_large_distant_explosion_31204.ogg");
+let soundCorrect = new Audio("asset/sound/zapsplat_human_male_middle_aged_soft_tone_says_oh_yeah_22279.ogg");
 soundWrong.preload = 'auto';
 soundCorrect.preload = 'auto';
 soundWrong.load();

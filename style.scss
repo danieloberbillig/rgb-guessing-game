@@ -19,11 +19,9 @@ body {
     border: 16px solid #f3f3f3;
     border-top: 16px solid var(--primary-color);
     border-radius: 50%;
-    // width: 100px;
-    // height: 100px;
+   
     position: fixed;
-    // top: 40%;
-    // left: 45%;
+   
     z-index: 9999;
     animation: spin 2s linear infinite;
     -webkit-animation: spin 2s linear infinite;
@@ -125,28 +123,15 @@ body {
 
 footer {
     text-decoration: none;
-    // width: 100%;
-    // align-self: flex-end;
-    // margin-bottom: 10px;
-    // text-align: center;
     font-size: 0.5em;
     opacity: 0.6;
-text-align: center;
+    text-align: center;
     margin: 25px auto 5px auto;
-
-    // position: absolute;
-    // bottom: 5px;
-    // margin: 0 20px 0 0;
-
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: flex-end;
 }
 
 footer p {
     display: inline;
     margin-left: 20px;
-    // flex: 1;
 }
 
 footer p a {
@@ -269,8 +254,6 @@ header p.rgb {
     line-height: 1.5em;
 }
 
-/* TODO: NOT WORKING */
-
 .controls ul li button.active {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -299,12 +282,7 @@ header p.rgb {
     header p.question {
         margin: 0;
     }
-    footer {
-        // font-size: .5em;
-        // position: absolute;
-        // bottom: 5px;
-        // margin: 0;
-    }
+    
     .tile-area {
         flex: 3;
     }
