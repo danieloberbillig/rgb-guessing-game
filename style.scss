@@ -124,13 +124,34 @@ body {
 }
 
 footer {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 0.6em;
+    text-decoration: none;
+    // width: 100%;
+    // align-self: flex-end;
+    // margin-bottom: 10px;
+    // text-align: center;
+    font-size: 0.5em;
     opacity: 0.6;
-    position: absolute;
-    bottom: 5px;
-    margin: 0;
+text-align: center;
+    margin: 25px auto 5px auto;
+
+    // position: absolute;
+    // bottom: 5px;
+    // margin: 0 20px 0 0;
+
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: flex-end;
+}
+
+footer p {
+    display: inline;
+    margin-left: 20px;
+    // flex: 1;
+}
+
+footer p a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* ------------------------------ */
@@ -207,7 +228,7 @@ header p.rgb {
 
     text-transform: uppercase;
     color: var(--primary-color);
-    font-size: 4em;
+    font-size: 6em;
     letter-spacing: 1px;
     transition: all 0.3s;
     border: none;
@@ -279,10 +300,10 @@ header p.rgb {
         margin: 0;
     }
     footer {
-        font-size: .5em;
-        position: absolute;
-        bottom: 5px;
-        margin: 0;
+        // font-size: .5em;
+        // position: absolute;
+        // bottom: 5px;
+        // margin: 0;
     }
     .tile-area {
         flex: 3;

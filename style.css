@@ -113,13 +113,21 @@ body {
 }
 
 footer {
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 0.6em;
+  text-decoration: none;
+  font-size: 0.5em;
   opacity: 0.6;
-  position: absolute;
-  bottom: 5px;
-  margin: 0;
+  text-align: center;
+  margin: 25px auto 5px auto;
+}
+
+footer p {
+  display: inline;
+  margin-left: 20px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ------------------------------ */
@@ -189,7 +197,7 @@ header p.rgb {
   z-index: 9999;
   text-transform: uppercase;
   color: var(--primary-color);
-  font-size: 4em;
+  font-size: 6em;
   letter-spacing: 1px;
   transition: all 0.3s;
   border: none;
@@ -249,13 +257,6 @@ header p.rgb {
   }
 
   header p.question {
-    margin: 0;
-  }
-
-  footer {
-    font-size: 0.5em;
-    position: absolute;
-    bottom: 5px;
     margin: 0;
   }
 

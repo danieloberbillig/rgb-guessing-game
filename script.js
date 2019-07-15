@@ -113,8 +113,8 @@ function checkAnswer() {
 
         correctMsg();
         newBtn.textContent = 'restart';
-        this.style.backgroundColor = bgStandard;
-        this.style.color = 'rgb(0,0,0)';
+        // this.style.backgroundColor = bgStandard;
+        // this.style.color = 'rgb(0,0,0)';
       
         // msg.textContent = 'correct';
         // setInterval(() => {

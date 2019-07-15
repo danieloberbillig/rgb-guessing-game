@@ -11,14 +11,14 @@ Inspired by udemy course https://www.udemy.com/the-web-developer-bootcamp/learn/
 # TODO
 - add daniel footer
 - add proper readm
-- change left side to flex items as currently things overlap when resize to mobile
 - click on restart should end sound effect
-- sass style.scss style.css
 - exact mobile vh
 - turn off/on music
 
 
 # DONE
+- change left side to flex items as currently things overlap when resize to mobile
+- sass style.scss style.css
 - centralize load spinner
 - bug fix: after a while the correct color returns undefined
 - vertical center control dark background buttons
