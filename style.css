@@ -197,7 +197,7 @@ header p.rgb {
   z-index: 9999;
   text-transform: uppercase;
   color: var(--primary-color);
-  font-size: 6em;
+  font-size: 5em;
   letter-spacing: 1px;
   transition: all 0.3s;
   border: none;
